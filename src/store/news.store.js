@@ -1,6 +1,6 @@
+// src/store/news.store.js
 import { create } from "zustand";
-import { fetchLatestNews } from "../services/newsApi";
-
+import { fetchLatestNews } from "../services/newsApi.js";
 const useNewsStore = create((set, get) => ({
     articles: [],
     loading: false,
@@ -9,13 +9,10 @@ const useNewsStore = create((set, get) => ({
     category: "",
     page: 1,
 
-    // Action: Set query
     setQuery: (q) => set({ query: q }),
-
-    // Action: Set category
     setCategory: (cat) => set({ category: cat }),
+    setPage: (page) => set({ page }),
 
-    // Action: Fetch news from API
     getNews: async () => {
         set({ loading: true, error: null });
         try {
@@ -25,7 +22,7 @@ const useNewsStore = create((set, get) => ({
         } catch (err) {
             set({ error: err.message, loading: false });
         }
-    }
+    },
 }));
 
 export default useNewsStore;

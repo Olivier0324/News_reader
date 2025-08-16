@@ -1,8 +1,29 @@
 import { Link } from "react-router-dom";
 
-export default function NewsCard({ article }) {
+export default function NewsCard({ article, category }) {
+  const categoryColors = {
+    business: "bg-green-500",
+    technology: "bg-blue-500",
+    sports: "bg-red-500",
+    entertainment: "bg-purple-500",
+    health: "bg-yellow-500",
+    general: "bg-gray-400",
+  };
+
+  // Use article.category if exists, else fall back to selected category or "General"
+  const cardCategory =
+    (article.category?.toLowerCase()) || (category?.toLowerCase()) || "general";
+
+  const categoryClass = categoryColors[cardCategory] || "bg-gray-400";
+
   return (
-    <div className="bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
+    <div className="relative bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
+      <span
+        className={`absolute top-2 left-2 px-2 py-1 text-xs text-white rounded ${categoryClass}`}
+      >
+        {cardCategory.charAt(0).toUpperCase() + cardCategory.slice(1)}
+      </span>
+
       {article.image_url && (
         <img
           src={article.image_url}
@@ -10,6 +31,7 @@ export default function NewsCard({ article }) {
           className="w-full h-48 object-cover"
         />
       )}
+
       <div className="p-4">
         <h2 className="text-lg font-bold mb-2">{article.title}</h2>
         <p className="text-sm text-gray-600 mb-3">

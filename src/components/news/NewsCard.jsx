@@ -17,7 +17,7 @@ export default function NewsCard({ article, category }) {
   const categoryClass = categoryColors[cardCategory] || "bg-gray-400";
 
   return (
-    <div className="relative bg-white shadow rounded overflow-hidden hover:shadow-lg transition">
+    <div className="relative rounded hover:shadow-lg transition bg-white dark:bg-gray-800  shadow-md overflow-hidden">
       <span
         className={`absolute top-2 left-2 px-2 py-1 text-xs text-white rounded ${categoryClass}`}
       >
@@ -33,8 +33,8 @@ export default function NewsCard({ article, category }) {
       )}
 
       <div className="p-4">
-        <h2 className="text-lg font-bold mb-2">{article.title}</h2>
-        <p className="text-sm text-gray-600 mb-3">
+        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">{article.title}</h2>
+        <p className="text-sm text-gray-600 mb-3 dark:text-gray-100">
           {article.snippet || "No summary available."}
         </p>
         <p className="text-xs text-gray-500 mb-3">
@@ -42,7 +42,7 @@ export default function NewsCard({ article, category }) {
         </p>
         <Link
           to={`/article/${article.uuid}`}
-          className="text-blue-500 hover:underline text-sm"
+          className="text-blue-500 hover:underline text-sm dark:text-gray-100"
         >
           Read More →
         </Link>

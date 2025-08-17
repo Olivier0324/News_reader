@@ -1,9 +1,8 @@
-// src/services/newsApi.js
 const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
 const BASE_URL = import.meta.env.VITE_NEWS_API_BASE_URL;
 
-// Fetch latest news
-export async function fetchLatestNews({ query = "", category = "", page = 1 }) {
+// Named export with default parameter
+export async function fetchLatestNews({ query = "", category = "", page = 1 } = {}) {
     try {
         const url = new URL(`${BASE_URL}/news/all`);
         url.searchParams.append("api_token", API_KEY);
@@ -21,3 +20,5 @@ export async function fetchLatestNews({ query = "", category = "", page = 1 }) {
         throw err;
     }
 }
+
+export  default fetchLatestNews

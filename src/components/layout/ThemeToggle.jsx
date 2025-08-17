@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
+<<<<<<< HEAD
   const [theme, setTheme] = useState("light");
 
   useEffect(() => {
@@ -37,6 +38,24 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
+=======
+  const [theme, setTheme] = useState(
+    localStorage.getItem("theme") || "light"
+  );
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
+  return (
+    <button
+      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+>>>>>>> 9f49cdb1338b9e9a4fb174d0d69c7a53a4f34e9d
       className="px-3 py-1 rounded-lg bg-gray-200 dark:bg-gray-700 
                  text-gray-800 dark:text-gray-200 transition"
     >

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Sun, MoonIcon } from "lucide-react";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState(
@@ -20,7 +21,7 @@ export default function ThemeToggle() {
       className="px-3 py-1 rounded-lg bg-gray-200 dark:bg-gray-700 
                  text-gray-800 dark:text-gray-200 transition"
     >
-      {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
+      {theme === "dark" ? <MoonIcon /> : <Sun />}
     </button>
   );
 }

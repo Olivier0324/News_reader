@@ -32,17 +32,16 @@ and view **full article details**.
 
 ## 📦 Installation
 
-1.  Clone the repository: \`\`\`bash git clone
-    https://github.com/Olivier0324/News_reader cd News-reader
-    \`\`\`
+1.  Clone the repository: ```bash git clone
+    https://github.com/Olivier0324/News_reader cd News-reader ```
 
-2.  Install dependencies: \`\`\`bash npm install \`\`\`
+2.  Install dependencies: ```bash npm install lucide-react react-router-dom ```
 
 3.  Create a **.env** file in the root directory and add your API key:
-    \`\`\`env VITE_NEWS_API_KEY=your_api_key_here
-    VITE_NEWS_API_BASE_URL=https://api.thenewsapi.com/v1/news/all \`\`\`
+    ```bash env VITE_NEWS_API_KEY=your_api_key_here
+    VITE_NEWS_API_BASE_URL=https://api.thenewsapi.com/v1/news/all ```
 
-4.  Start the development server: \`\`\`bash npm run dev \`\`\`
+4.  Start the development server: ```bash npm run dev ```
 
 ------------------------------------------------------------------------
 
@@ -53,7 +52,7 @@ and view **full article details**.
 -   Use the **category filter** to view specific topics (e.g.,
     Technology, Sports).
 -   Click **Read More →** to open the full article page.
--   Use the **theme toggle** (🌞/🌙) to switch between light and dark
+-   Use the **theme toggle** (Sun/Moon) Icons to switch between light and dark
     modes.
 
 

@@ -2,7 +2,8 @@
 
 A modern **React + Vite + TailwindCSS** application that fetches and
 displays the  news articles using the [TheNews
-API](https://api.thenewsapi.com/v1/news/all). Here is the link to the project [News Reader Website](https://news-reader-pi.vercel.app/)
+API](https://api.thenewsapi.com/v1/news/all).
+Here is the link to the project [News Reader Website](https://news-reader-pi.vercel.app/).
 Users can browse news by categories, toggle between **dark/light mode**,
 and view **full article details**.
 
@@ -16,6 +17,7 @@ and view **full article details**.
 -   View full article details on a separate page
 -   Responsive design with TailwindCSS v4.1
 -   State management using Zustand
+-   Vercel For Hosting Service
 
 ------------------------------------------------------------------------
 

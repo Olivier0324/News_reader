@@ -4,7 +4,7 @@ const BASE_URL = import.meta.env.VITE_NEWS_API_BASE_URL;
 // Named export with default parameter
 export async function fetchLatestNews({ query = "", category = "", page = 1 } = {}) {
     try {
-        const url = new URL(`${BASE_URL}/news/all`);
+        const url = new URL(`${BASE_URL}`);
         url.searchParams.append("api_token", API_KEY);
         url.searchParams.append("language", "en");
         url.searchParams.append("page", page);

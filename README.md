@@ -1,12 +1,60 @@
-# React + Vite
+# 📰 News Reader App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern **React + Vite + TailwindCSS** application that fetches and
+displays the  news articles using the [TheNews
+API](https://api.thenewsapi.com/v1/news/all).\
+Users can browse news by categories, toggle between **dark/light mode**,
+and view **full article details**.
 
-Currently, two official plugins are available:
+------------------------------------------------------------------------
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+-   Fetch  news articles from TheNews API
+-   Category filter (All, Technology, Business, Sports, Health, etc.)
+-   Persistent **dark/light theme toggle**
+-   View full article details on a separate page
+-   Responsive design with TailwindCSS v4.1
+-   State management using Zustand
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+------------------------------------------------------------------------
+
+## 🛠️ Tech Stack
+
+-   **React 18**
+-   **Vite**
+-   **Tailwind CSS v4.1**
+-   **Zustand** (state management)
+-   **React Router DOM** (routing)
+-   **TheNews API**
+
+------------------------------------------------------------------------
+
+## 📦 Installation
+
+1.  Clone the repository: \`\`\`bash git clone
+    https://github.com/Olivier0324/News_reader cd News-reader
+    \`\`\`
+
+2.  Install dependencies: \`\`\`bash npm install \`\`\`
+
+3.  Create a **.env** file in the root directory and add your API key:
+    \`\`\`env VITE_NEWS_API_KEY=your_api_key_here
+    VITE_NEWS_API_BASE_URL=https://api.thenewsapi.com/v1/news/all \`\`\`
+
+4.  Start the development server: \`\`\`bash npm run dev \`\`\`
+
+------------------------------------------------------------------------
+
+## 📖 Usage
+
+-   Open the app in your browser at <http://localhost:5173>.
+-   By default, all latest news will be displayed.
+-   Use the **category filter** to view specific topics (e.g.,
+    Technology, Sports).
+-   Click **Read More →** to open the full article page.
+-   Use the **theme toggle** (🌞/🌙) to switch between light and dark
+    modes.
+
+
+
